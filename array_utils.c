@@ -27,4 +27,28 @@ int containsWithin(const int *arr , int size , int x , int i , int j)
     return 0;
 }
 
+int *paddedCopy(const int *arr , int oldSize , int newsize)
+{
+    int *newArr = (int *)malloc(sizeof(int )* newsize);
+    if(!newArr)
+    {
+        return NULL;
+    }
+
+    int minSize = (oldSize < newsize) ? oldSize : newsize;
+    for(int i = 0 ; i<minSize ;i++)
+    {
+        newArr[i] = arr[i];
+    }
+    return newArr;
+
 //place your function definitions here
+}
+
+void reverse(int *arr , int size)
+{
+    
+}
+
+
+
